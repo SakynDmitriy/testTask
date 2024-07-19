@@ -1,0 +1,8 @@
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/install/strip.dir
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/install.dir
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/list_install_components.dir
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/rebuild_cache.dir
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/edit_cache.dir
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/install/local.dir
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/server.dir
+/media/try3/DiskD/LinuxProg/testTask/server/build/CMakeFiles/server_autogen.dir
