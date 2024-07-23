@@ -11,6 +11,7 @@ Server::Server(char* _temp)
 	if(!_temp) throw std::runtime_error(" need start key (int n) \n ./server (n) \n ");
 
 	float value = atof(_temp);
+
 	if(value != static_cast<int>(value)) throw std::runtime_error(" invalid value ");
 
 	if(!this->listen(QHostAddress::Any, getPort()))
