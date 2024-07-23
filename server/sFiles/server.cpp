@@ -1,14 +1,26 @@
 #include "../hFiles/server.h"
 #include <QDebug>
-
 #include <QCoreApplication>
-Server::Server()
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+
+Server::Server(char* _temp)
 {
-    if(!this->listen(QHostAddress::Any, 6000)){
-        qDebug() << "server is not started";
-    } else {
-        qDebug() << "-- server is started";
-    }
+
+	if(!_temp) throw std::runtime_error(" need start key (int n) \n ./server (n) \n ");
+
+	float value = atof(_temp);
+	if(value != static_cast<int>(value)) throw std::runtime_error(" invalid value ");
+
+	if(!this->listen(QHostAddress::Any, getPort()))
+	{
+		qDebug() << "server is not started";
+	}
+	else
+	{
+		qDebug() << "-- server is started ";
+	}
 }
 
 void Server::incomingConnection(qintptr socketDescriptor)
@@ -29,35 +41,34 @@ void Server::slotReadyRead()
   if(in.status() == QDataStream::Ok)
   {
     qDebug() << "-- ready for read ";
-    int temp, temp2;
+		int sendInf;
     char opr;
-    in>>temp>>temp2>>opr;
-    qDebug() << "-- val1=" << temp
-             << "val2="   << temp2;
+		in>>sendInf>>opr;
+		qDebug() << "-- val1=" << sendInf
+		         <<    "val2=" << temp;
 
     qDebug() << "-- operation=" << temp
              << opr
-             << temp2;
-
+		         << sendInf;
     switch (opr) {
       case '+':
-        temp += temp2;
+			  sendInf += temp;
         break;
       case '-':
-        temp -= temp2;
+			  sendInf -= temp;
         break;
       case '*':
-        temp *= temp2;
+			  sendInf *= temp;
         break;
       case '/':
-        temp /= temp2;
+			  sendInf /= temp;
         break;
 
       default:
         break;
       }
 
-    SendToClient(temp);
+		SendToClient(sendInf);
     }
   else
   {
@@ -72,4 +83,21 @@ void Server::SendToClient(int temp)
   out.setVersion(QDataStream::Qt_6_2);
   out<<temp;
   socket->write(Data);
+}
+
+int Server::getPort()
+{
+	QByteArray dataConfig;
+	{
+		QString jsonPath = "config.json";
+		QFile config(jsonPath);
+		if(!config.open(QIODevice::ReadOnly | QIODevice::Text)) throw std::runtime_error(" couldn't open file ");
+		dataConfig = config.readAll();
+		config.close();
+	}
+
+	QJsonDocument config = QJsonDocument::fromJson(dataConfig);
+	QJsonObject port = config.object();
+
+	return port.value("port").toInt();
 }

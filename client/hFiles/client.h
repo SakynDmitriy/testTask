@@ -33,6 +33,7 @@ private:
   Ui::MainWindow *ui;
   QTcpSocket *socket;
   QByteArray Data;
-  void sendToServer(int temp, int temp2, char opr);
+	std::pair<QString, int> getConfigInfo();
+	void sendToServer(int temp, char opr);
 };
 #endif // CLIENT_H

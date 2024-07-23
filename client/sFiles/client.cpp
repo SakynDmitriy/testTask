@@ -1,5 +1,9 @@
 #include "../hFiles/client.h"
 #include "./ui_client.h"
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QTextEdit>
 
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
@@ -32,31 +36,53 @@ void MainWindow::slotReadyRead()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-  socket->connectToHost("127.0.0.1", 6000);
+	std::pair<QString, int> ip_port = getConfigInfo();
+	socket->connectToHost(ip_port.first, ip_port.second);
 }
 
 
 void MainWindow::on_pushButton_3_clicked()
 {
-  if(oprType != ' ')
+	float value= ui->textEdit->toPlainText().toFloat();
+	if(oprType != ' ' && value == ui->textEdit->toPlainText().toInt())
   {
-    sendToServer(ui->textEdit->toPlainText().toFloat(),
-                 ui->textEdit_2->toPlainText().toFloat(), oprType);
+		sendToServer(ui->textEdit->toPlainText().toInt(), oprType);
   }
   else
   {
+		ui->textBrowser->append(" value is float ");
     ui->textBrowser->append(" choose the operation ");
   }
 }
 
-void MainWindow::sendToServer(int temp, int temp2, char opr)
+void MainWindow::sendToServer(int temp, char opr)
 {
   ui->textBrowser->clear();
   Data.clear();
   QDataStream out(&Data, QIODevice::WriteOnly);
   out.setVersion(QDataStream::Qt_6_2);
-  out<<temp<<temp2<<opr;
+	out<<temp<<opr;
   socket->write(Data);
+}
+
+std::pair<QString, int> MainWindow::getConfigInfo()
+{
+	QByteArray dataConfig;
+	{
+		QFile config("config.json");
+		if(!config.open(QIODevice::ReadOnly | QIODevice::Text)) throw std::runtime_error(" couldn't open file ");
+
+		dataConfig = config.readAll();
+		config.close();
+	}
+
+	QJsonDocument config = QJsonDocument::fromJson(dataConfig);
+	QJsonObject ip_port = config.object();
+
+	qDebug()<<ip_port.value("ip").toString()<<ip_port.value("port").toInt();
+
+	return std::make_pair(ip_port.value("ip").toString(),
+	                      ip_port.value("port").toInt());
 }
 
 void MainWindow::on_radioButton_2_clicked()

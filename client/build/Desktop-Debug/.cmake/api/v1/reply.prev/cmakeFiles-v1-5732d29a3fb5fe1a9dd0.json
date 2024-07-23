@@ -224,11 +224,6 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/opt/cmake-3.20.6/Modules/CheckIncludeFile.cxx.in"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
 			"path" : "/opt/cmake-3.20.6/Modules/FindPackageHandleStandardArgs.cmake"
 		},
 		{

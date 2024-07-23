@@ -7,19 +7,21 @@
 
 class Server : public QTcpServer
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    Server();
-    QTcpSocket * socket;
+	Server(char* _temp);
+	QTcpSocket * socket;
 
 public slots:
-    void incomingConnection(qintptr socketDescriptor);
-    void slotReadyRead();
+	void incomingConnection(qintptr socketDescriptor);
+	void slotReadyRead();
 
 private:
-    QByteArray Data;
-    void SendToClient(int temp);
+	QByteArray Data;
+	int temp;
+	void SendToClient(int temp);
+	int getPort();
 };
 
 #endif // SERVER_H

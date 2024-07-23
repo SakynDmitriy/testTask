@@ -55,7 +55,6 @@
 		"/opt/cmake-3.20.6/Modules/CheckLibraryExists.cmake",
 		"/opt/cmake-3.20.6/Modules/CheckIncludeFileCXX.cmake",
 		"/opt/cmake-3.20.6/Modules/CheckCXXSourceCompiles.cmake",
-		"/opt/cmake-3.20.6/Modules/CheckIncludeFile.cxx.in",
 		"/opt/cmake-3.20.6/Modules/FindPackageHandleStandardArgs.cmake",
 		"/opt/cmake-3.20.6/Modules/FindPackageMessage.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",

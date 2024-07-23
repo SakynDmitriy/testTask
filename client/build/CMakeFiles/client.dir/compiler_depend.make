@@ -1265,8 +1265,104 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFile \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfiledevice.h \
+  /usr/include/c++/13/filesystem \
+  /usr/include/c++/13/bits/fs_fwd.h \
+  /usr/include/c++/13/bits/fs_path.h \
+  /usr/include/c++/13/locale \
+  /usr/include/c++/13/bits/locale_facets.h \
+  /usr/include/c++/13/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+  /usr/include/c++/13/bits/locale_facets.tcc \
+  /usr/include/c++/13/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/13/bits/codecvt.h \
+  /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/13/bits/locale_conv.h \
+  /usr/include/c++/13/iomanip \
+  /usr/include/c++/13/bits/quoted_string.h \
+  /usr/include/c++/13/sstream \
+  /usr/include/c++/13/istream \
+  /usr/include/c++/13/ios \
+  /usr/include/c++/13/bits/basic_ios.h \
+  /usr/include/c++/13/bits/basic_ios.tcc \
+  /usr/include/c++/13/ostream \
+  /usr/include/c++/13/bits/ostream.tcc \
+  /usr/include/c++/13/bits/istream.tcc \
+  /usr/include/c++/13/bits/sstream.tcc \
+  /usr/include/c++/13/codecvt \
+  /usr/include/c++/13/bits/fs_dir.h \
+  /usr/include/c++/13/bits/fs_ops.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonDocument \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsondocument.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonobject.h
 
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonobject.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonObject:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h:
+
+/usr/include/c++/13/bits/fs_dir.h:
+
+/usr/include/c++/13/codecvt:
+
+/usr/include/c++/13/bits/sstream.tcc:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/include/c++/13/bits/basic_ios.h:
+
+/usr/include/c++/13/istream:
+
+/usr/include/c++/13/bits/quoted_string.h:
+
+/usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/c++/13/bits/locale_conv.h:
+
+/usr/include/c++/13/bits/locale_facets_nonio.tcc:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
+
+/usr/include/c++/13/bits/locale_facets_nonio.h:
+
+/usr/include/c++/13/bits/locale_facets.tcc:
+
+/usr/include/c++/13/cwctype:
+
+/usr/include/c++/13/bits/fs_path.h:
+
+/usr/include/c++/13/bits/fs_fwd.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QFile:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h:
 
@@ -1292,6 +1388,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtextbrowser.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qnativeinterface.h:
@@ -1305,6 +1403,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkexports.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetwork-config.h:
+
+/usr/include/c++/13/filesystem:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant:
 
@@ -1326,6 +1426,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h:
 
+/usr/include/c++/13/locale:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringconverter_base.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h:
@@ -1333,6 +1435,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h:
+
+/usr/include/c++/13/bits/locale_facets.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h:
 
@@ -1377,6 +1481,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h:
 
 /usr/include/c++/13/bits/stl_map.h:
+
+/usr/include/c++/13/bits/codecvt.h:
 
 /usr/include/c++/13/bits/stl_tree.h:
 
@@ -1441,6 +1547,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 /usr/include/errno.h:
 
 /usr/include/c++/13/cerrno:
+
+/usr/include/c++/13/sstream:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h:
 
@@ -1566,6 +1674,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
+/usr/include/c++/13/iomanip:
+
 /usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h:
@@ -1639,6 +1749,8 @@ CMakeFiles/client.dir/sFiles/client.cpp.o: ../sFiles/client.cpp \
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/13/cstddef:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonDocument:
 
 /usr/include/c++/13/bits/stl_algo.h:
 
@@ -1822,6 +1934,8 @@ client_autogen/include/ui_client.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsondocument.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 client_autogen/mocs_compilation.cpp:
@@ -1829,6 +1943,8 @@ client_autogen/mocs_compilation.cpp:
 /usr/include/c++/13/version:
 
 /usr/include/c++/13/bits/stringfwd.h:
+
+/usr/include/c++/13/bits/fs_ops.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qforeach.h:
 
@@ -1918,6 +2034,8 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h:
+
 /usr/include/c++/13/cstring:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
@@ -1938,6 +2056,10 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 
 /usr/include/c++/13/cstdint:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
+
 /usr/include/c++/13/bits/char_traits.h:
 
 /usr/include/c++/13/bits/std_function.h:
@@ -1952,11 +2074,15 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreexports.h:
 
+/usr/include/c++/13/ostream:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsystemdetection.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h:
+
+/usr/include/wctype.h:
 
 /usr/include/sched.h:
 
@@ -1984,6 +2110,8 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsysinfo.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h:
@@ -1994,6 +2122,8 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qlogging.h:
 
+/usr/include/c++/13/ios:
+
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h:
@@ -2003,6 +2133,8 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h:
 
@@ -2023,6 +2155,8 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qgenericatomic.h:
 
 /usr/include/c++/13/atomic:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qfiledevice.h:
 
 /usr/include/c++/13/cmath:
 
@@ -2094,6 +2228,8 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 
 /usr/include/c++/13/tr1/poly_hermite.tcc:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h:
+
 /usr/include/c++/13/tr1/riemann_zeta.tcc:
 
 /usr/include/c++/13/bits/new_allocator.h:
@@ -2101,6 +2237,8 @@ client_autogen/OJ26IRO3O6/moc_client.cpp:
 /usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiexports.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h:
 
