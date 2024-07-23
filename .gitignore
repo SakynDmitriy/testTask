@@ -1,6 +1,7 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
-build
+server/build
+client/build
 *~
 *.autosave
 *.a
