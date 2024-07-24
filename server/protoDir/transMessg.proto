@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package transMssg;
+
+message DataPock {
+ optional int32 value = 1;
+ optional string operand = 2;
+}

@@ -19,7 +19,7 @@ public slots:
 
 private:
 	QByteArray Data;
-	int temp;
+	int temp = 0;
 	void SendToClient(int temp);
 	int getPort();
 };

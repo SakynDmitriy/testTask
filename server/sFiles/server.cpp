@@ -4,6 +4,7 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include "../../protoDir/transMessg.pb.h"
 
 Server::Server(char* _temp)
 {
@@ -11,8 +12,8 @@ Server::Server(char* _temp)
 	if(!_temp) throw std::runtime_error(" need start key (int n) \n ./server (n) \n ");
 
 	float value = atof(_temp);
-
-	if(value != static_cast<int>(value)) throw std::runtime_error(" invalid value ");
+	temp = static_cast<int>(value);
+	if(value != temp) throw std::runtime_error(" invalid value ");
 
 	if(!this->listen(QHostAddress::Any, getPort()))
 	{
@@ -36,32 +37,34 @@ void Server::incomingConnection(qintptr socketDescriptor)
 
 void Server::slotReadyRead()
 {
-  socket = (QTcpSocket*)sender();
-  QDataStream in(socket);
-  in.setVersion(QDataStream::Qt_6_2);
+	using namespace transMssg;
+	DataPock fromClient;
+
+	QDataStream in(socket);
+	in.setVersion(QDataStream::Qt_6_2);
   if(in.status() == QDataStream::Ok)
-  {
-    qDebug() << "-- ready for read ";
-		int sendInf;
-    char opr;
-		in>>sendInf>>opr;
+  {		
+		Data = socket->readAll();
+		fromClient.ParseFromArray(Data.data(), Data.size());
+
+		qDebug() << "-- ready for read ";
+		int sendInf = fromClient.value();
+		int opr = fromClient.operand();
+
 		qDebug() << "-- val1=" << sendInf
 		         <<    "val2=" << temp;
 
-    qDebug() << "-- operation=" << temp
-             << opr
-		         << sendInf;
-    switch (opr) {
-      case '+':
+		switch (opr) {
+		  case 2:
 			  sendInf += temp;
         break;
-      case '-':
+		  case 3:
 			  sendInf -= temp;
         break;
-      case '*':
+		  case 4:
 			  sendInf *= temp;
         break;
-      case '/':
+		  case 1:
 			  sendInf /= temp;
         break;
 
@@ -77,12 +80,18 @@ void Server::slotReadyRead()
   }
 }
 
-void Server::SendToClient(int temp)
+void Server::SendToClient(int val)
 {
-  Data.clear();
-  QDataStream out(&Data, QIODevice::WriteOnly);
-  out.setVersion(QDataStream::Qt_6_2);
-  out<<temp;
+	using namespace transMssg;
+	DataPock somevalue;
+
+	somevalue.set_value(val);
+	std::string srlzString;
+	somevalue.SerializeToString(&srlzString);
+
+	Data.clear();
+	Data = QByteArray(srlzString.c_str(), srlzString.length());
+
   socket->write(Data);
 }
 
@@ -90,7 +99,8 @@ int Server::getPort()
 {
 	QByteArray dataConfig;
 	{
-		QString jsonPath = "config.json";
+		//-----------  config.json for server located in main dir ------------------
+		QString jsonPath = "../../config.json";
 		QFile config(jsonPath);
 		if(!config.open(QIODevice::ReadOnly | QIODevice::Text)) throw std::runtime_error(" couldn't open file ");
 		dataConfig = config.readAll();

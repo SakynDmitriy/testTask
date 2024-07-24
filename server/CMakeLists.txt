@@ -12,7 +12,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Core)
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Network)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Network)
-
+find_package(Protobuf REQUIRED)
+INCLUDE_DIRECTORIES(${PROTOBUF_INCLUDE_DIR})
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
 message("-- Version: -- "  ${QT_VERSION_MAJOR} " -- ")
 
 add_executable(server
@@ -25,6 +27,7 @@ target_link_libraries(server Qt6::Core Qt6::Network)
 
 include(GNUInstallDirs)
 install(TARGETS server
+ BUNDLE DESTINATION .
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )

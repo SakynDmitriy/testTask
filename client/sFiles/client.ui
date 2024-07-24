@@ -53,20 +53,6 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QRadioButton" name="radioButton_2">
-       <property name="text">
-        <string>+</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_4">
-       <property name="text">
-        <string>*</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QRadioButton" name="radioButton">
        <property name="text">
         <string>/</string>
@@ -74,9 +60,23 @@
       </widget>
      </item>
      <item>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QRadioButton" name="radioButton_3">
        <property name="text">
         <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_4">
+       <property name="text">
+        <string>*</string>
        </property>
       </widget>
      </item>

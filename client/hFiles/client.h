@@ -29,11 +29,11 @@ private slots:
   void on_radioButton_4_clicked();
 
 private:
-  char oprType;
+	int oprType;
   Ui::MainWindow *ui;
   QTcpSocket *socket;
   QByteArray Data;
 	std::pair<QString, int> getConfigInfo();
-	void sendToServer(int temp, char opr);
+	void sendToServer(int temp, int opr);
 };
 #endif // CLIENT_H
