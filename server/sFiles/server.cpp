@@ -100,7 +100,7 @@ int Server::getPort()
 	QByteArray dataConfig;
 	{
 		//-----------  config.json for server located in main dir ------------------
-		QString jsonPath = "../../config.json";
+		QString jsonPath = "config.json";
 		QFile config(jsonPath);
 		if(!config.open(QIODevice::ReadOnly | QIODevice::Text)) throw std::runtime_error(" couldn't open file ");
 		dataConfig = config.readAll();

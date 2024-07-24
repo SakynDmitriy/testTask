@@ -52,7 +52,7 @@ std::pair<QString, int> MainWindow::getConfigInfo()
 {
 	QByteArray dataConfig;
 	{
-		QFile config("../../config.json");
+		QFile config("config.json");
 		if(!config.open(QIODevice::ReadOnly | QIODevice::Text)) throw std::runtime_error(" couldn't open file ");
 
 		dataConfig = config.readAll();
